@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Northgate Security – Cyber security services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap">
+<style>
+:root{
+  --bg:#F4F6F8;--surface:#FFFFFF;--text:#0F1D2E;--muted:#4A5B6E;--line:#D5DCE4;
+  --ink:#0F1D2E;--ink-text:#E8EDF2;--accent:#1F7A7A;--alert:#E4572E;--btn:#0F1D2E;--btn-text:#F4F6F8;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A121C;--surface:#111D2B;--text:#E8EDF2;--muted:#9AABBD;--line:#24364A;
+  --ink:#0F1D2E;--accent:#4FC3C3;--btn:#E8EDF2;--btn-text:#0A121C;}}
+:root[data-theme="dark"]{--bg:#0A121C;--surface:#111D2B;--text:#E8EDF2;--muted:#9AABBD;--line:#24364A;--accent:#4FC3C3;--btn:#E8EDF2;--btn-text:#0A121C;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--alert);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:800;font-stretch:110%;font-size:20px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:22px;height:26px;background:var(--text);clip-path:polygon(50% 0,100% 18%,100% 55%,50% 100%,0 55%,0 18%)}
+nav a{margin-left:22px;text-decoration:none;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 72px}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.04;font-weight:800;font-stretch:100%;letter-spacing:-.02em;margin:0 0 20px}
+.lead{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 28px}
+.btn{display:inline-block;background:var(--btn);color:var(--btn-text);padding:14px 24px;border-radius:6px;font-weight:700;text-decoration:none}
+.btn.ghost{background:none;color:var(--text);border:1.5px solid var(--line);margin-left:10px}
+.log{background:var(--ink);color:var(--ink-text);border-radius:10px;padding:18px;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;min-height:290px;overflow:hidden;box-shadow:0 0 0 1px #24364A}
+.log b{color:#8FA3B8;font-weight:400}
+.log .ok{color:#4FC3C3}.log .bad{color:#FF7A55}
+.log .bar{display:flex;gap:6px;margin-bottom:12px}.log .bar span{width:9px;height:9px;border-radius:50%;background:#2B4A6B}
+.log div.l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 12px;letter-spacing:-.015em;font-weight:800}
+.sub{color:var(--muted);max-width:36em;margin:0 0 40px}
+.svc{display:grid;grid-template-columns:240px 1fr;gap:8px 40px;padding:22px 0;border-top:1px solid var(--line)}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc h3{margin:0;font-size:20px}
+.svc p{margin:0;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px}
+.step::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;margin-bottom:14px}
+.step h3{margin:0 0 8px}.step p{margin:0;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:12px 36px;margin:0;padding:0;list-style:none;color:var(--muted)}
+.facts li::before{content:"✓ ";color:var(--accent);font-weight:800}
+.cta{background:var(--ink);color:var(--ink-text);border-radius:12px;padding:48px 32px;text-align:center}
+.cta p{color:#9AABBD;max-width:32em;margin:0 auto 24px}
+.cta .btn{background:#E8EDF2;color:#0A121C}
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+@media (max-width:800px){.hero{grid-template-columns:1fr;padding-top:24px}.svc{grid-template-columns:1fr}.steps{grid-template-columns:1fr}nav a:not(.keep){display:none}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#top"><i></i>Northgate Security</a>
+  <nav><a href="#services">Services</a><a href="#process">How we work</a><a class="keep" href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div>
+    <h1>Find the weak points before attackers do.</h1>
+    <p class="lead">We test, monitor and defend the systems your business runs on. Plain-language reports, fixes ranked by risk, and a team that picks up the phone when something goes wrong.</p>
+    <a class="btn" href="#contact">Book a free consultation</a><a class="btn ghost" href="#services">See our services</a>
+  </div>
+  <div class="log" role="img" aria-label="Animated example of a security monitoring log blocking threats">
+    <div class="bar"><span></span><span></span><span></span></div>
+    <div id="feed"></div>
+  </div>
+</div>
+
+<section id="services">
+  <h2>What we do</h2>
+  <p class="sub">Pick one service or combine them. Every engagement ends with a clear list of what to fix first.</p>
+  <div class="svc"><h3>Penetration testing</h3><p>We attack your websites, apps, networks and staff the way a real criminal would, then show you exactly how we got in and how to close the door.</p></div>
+  <div class="svc"><h3>24/7 monitoring</h3><p>Our analysts watch your systems around the clock, filter out the noise and contact you only when something needs a decision.</p></div>
+  <div class="svc"><h3>Incident response</h3><p>If you’ve been breached, we contain it, find out what happened, restore operations and help you meet notification requirements.</p></div>
+  <div class="svc"><h3>Cloud security review</h3><p>We check your AWS, Azure or Google Cloud setup for exposed data, risky permissions and misconfigurations.</p></div>
+  <div class="svc"><h3>Staff training</h3><p>Short, practical sessions and phishing simulations that teach your team to spot and report attacks.</p></div>
+  <div class="svc"><h3>Compliance support</h3><p>Gap assessments and policy help for ISO 27001, SOC 2, GDPR and similar standards, so audits stop being a scramble.</p></div>
+</section>
+
+<section id="process">
+  <h2>How an engagement works</h2>
+  <p class="sub">No jargon, no surprises. You always know what we’re doing and why.</p>
+  <div class="steps">
+    <div class="step"><h3>Assess</h3><p>We agree on scope, then test your systems and map the real risks to your business.</p></div>
+    <div class="step"><h3>Fix</h3><p>You get a prioritised report. We walk your team through it and help close the gaps.</p></div>
+    <div class="step"><h3>Protect</h3><p>Ongoing monitoring and retesting keep you secure as your business changes.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why clients choose us</h2>
+  <ul class="facts">
+    <li>Certified testers (OSCP, CISSP, CEH)</li><li>Fixed-price quotes</li><li>Reports written for non-technical readers</li><li>Strict confidentiality agreements</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <h2>Not sure where you stand?</h2>
+    <p>Book a free 30-minute call. We’ll review your setup and tell you honestly what matters most.</p>
+    <a class="btn" href="mailto:hello@northgate-security.example?subject=Security%20consultation">Email us to book</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Northgate Security. All rights reserved.</footer>
+</div>
+
+<script>
+(function(){
+  var feed=document.getElementById('feed');
+  var lines=[
+    ['ok','scan started: web-app-01'],
+    ['bad','blocked: SQL injection attempt from 203.0.113.42'],
+    ['ok','patch verified: OpenSSL 3.0.x'],
+    ['bad','blocked: brute-force login (87 tries)'],
+    ['bad','flagged: phishing link clicked by 1 user'],
+    ['ok','user isolated, credentials reset'],
+    ['ok','report ready: 3 high, 7 medium findings'],
+    ['ok','status: all critical issues contained']
+  ];
+  function row(t,c){var d=document.createElement('div');d.className='l';d.innerHTML='<b>'+new Date().toTimeString().slice(0,8)+'</b> <span class="'+c+'"></span>';d.lastChild.textContent=t;feed.appendChild(d);}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){lines.forEach(function(l){row(l[1],l[0]);});return;}
+  var i=0;
+  (function next(){
+    if(i>=lines.length){setTimeout(function(){feed.innerHTML='';i=0;next();},3500);return;}
+    row(lines[i][1],lines[i][0]);i++;setTimeout(next,900);
+  })();
+})();
+</script>
+</body>
+</html>
